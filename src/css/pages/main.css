@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+
+
+
+@media only screen and (max-width: 480px) { /* #####	MOBILE SCREEN #####*/
+    #isotope dl {   width:98%; margin:1%;  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1024px) { /* #####	PAD SCREEN #####*/
+    #isotope dl {   width:31.33%; margin:1%;  }
+}
+@media only screen and (min-width: 1025px) { /* #####	PC SCREEN #####*/
+}
