@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--
+	가운대 중앙정렬 및 핵
+ /*=== article ===*/
+article section ul { width: 100%; text-align: center;	/*	left , center	 */ }
+article section ul li {	display: inline-block; zoom: 1; width: 170px; height: 200px;	background: #fefefe; border: 1px solid #d5d5d5; margin: 10px;
+	*display: inline/*IE7 HACK*/;
+	_display: inline;/*IE6 HACK*/
+}
+-->
+	<style type="text/css">
+	/* COMMON */
+	html {overflow-y:scroll;}
+	body, p, ul, ol, li, dl, dt, dd, form, table, th, td, fieldset, legend, input, textarea, select, button, h1, h2, h3, h4, h5, h6, pre {margin:0; padding:0;} 
+	body, input, textarea, select, button {color:#666; font-size:12px; font-family:'돋움', sans-serif}
+	textarea	{overflow:auto; resize:none;}
+	fieldset, img {border:0;}
+	ul,ol {list-style:none}
+	table {border-collapse:collapse;}
+	legend, caption {display:none;}
+	ul, ol {list-style:none;}
+	a {color:#666; text-decoration:none;}
+	a:hover,a:active {text-decoration:underline}
+
+	.UI_code	{ padding:20px; zoom:1; border: 1px solid #FF0000; }
+	.UI_code:after	{content:"."; display:block; height:0px; clear:both; visibility:hidden}
+	.UI_code	h1	{margin-bottom:10px; font-size:14px; color:#333}
+
+	/* page */
+	.page	{width:720px; text-align:center;}
+	.page	.btn_prev,	.page	.btn_next	{display:inline-block}
+	.page	.btn_prev	a,
+	.page	.btn_next	a	{display:block; float:left; width:32px; height:30px; margin:0 1px 0 2px; text-indent:-5000px; background:url('images/bg_page.png') no-repeat 0 0}
+
+	.page	.btn_prev	a.btn_f	{background-position:0 0}
+	.page	.btn_prev	a.btn_f:hover	{background-position:0 -35px}
+	.page	.btn_prev	a.btn_f:active	{background-position:0 -70px}
+	.page	.btn_prev	a.btn_p	{background-position:-36px 0}
+	.page	.btn_prev	a.btn_p:hover	{background-position:-36px -35px}
+	.page	.btn_prev	a.btn_p:active	{background-position:-36px -70px}
+	.page	.btn_next	a.btn_n	{background-position:-72px 0}
+	.page	.btn_next	a.btn_n:hover	{background-position:-72px -35px}
+	.page	.btn_next	a.btn_n:active	{background-position:-72px -70px}
+	.page	.btn_next	a.btn_l	{background-position:-108px 0}
+	.page	.btn_next	a.btn_l:hover	{background-position:-108px -35px}
+	.page	.btn_next	a.btn_l:active	{background-position:-108px -70px}
+
+	.page	.btn_prev	a.btn_f.btn_di	{background-position:0 -105px}
+	.page	.btn_prev	a.btn_p.btn_di	{background-position:-36px -105px}
+	.page	.btn_next	a.btn_n.btn_di	{background-position:-72px -105px}
+	.page	.btn_next	a.btn_l.btn_di	{background-position:-108px -105px}
+
+	.page	.page_num	{display:inline-block; padding:0 3px; *padding:0 7px}
+	.page	.page_num	a	{display:block; float:left; width:30px; height:20px; margin:0 1px 0 2px; padding-top:8px; border:1px solid #c7c7c7; background:#fafafa; text-align:center; font-size:13px; font-weight:bold; line-height:1em}
+	.page	.page_num	a:hover		{border:1px solid #b3b3b3; background:#fff; color:#333; text-decoration:none}
+	.page	.page_num	a:active	{border:1px solid #ababab; background:#e6e6e6; text-decoration:none}
+	.page	.page_num	a.on		{border:1px solid #503299; background:#6b44cc; color:#fff}
+	</style>
+</head>
+<body>
+
+<div class="UI_code">
+	<div class="page">
+		<span class="btn_prev">
+			<a href="#" class="btn_f">처음 페이지</a>
+			<a href="#" class="btn_p">전 페 이지</a>
+		</span>
+		<span class="page_num">
+			<a href="#" class="on">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+			<a href="#">6</a>
+			<a href="#">7</a>
+			<a href="#">8</a>
+			<a href="#">9</a>
+			<a href="#">10</a>
+		</span>
+		<span class="btn_next">
+			<a href="#" class="btn_n">다음 페이지</a>
+			<a href="#" class="btn_l">마지막 페이지</a>
+		</span>
+	</div>
+</div>
+
+<div class="UI_code">
+	<div class="page">
+		<span class="btn_prev">
+			<a class="btn_f btn_di">처음 페이지</a>
+			<a class="btn_p btn_di">전 페 이지</a>
+		</span>
+		<span class="page_num">
+			<a href="#" class="on">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+			<a href="#">6</a>
+			<a href="#">7</a>
+			<a href="#">8</a>
+			<a href="#">9</a>
+			<a href="#">10</a>
+		</span>
+		<span class="btn_next">
+			<a class="btn_n btn_di">다음 페이지</a>
+			<a class="btn_l btn_di">마지막 페이지</a>
+		</span>
+	</div>
+</div>
+
+</body>
+</html>
