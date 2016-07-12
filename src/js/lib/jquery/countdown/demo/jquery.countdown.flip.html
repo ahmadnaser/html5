@@ -1,0 +1,28 @@
+<?php include($_SERVER['DOCUMENT_ROOT']."/pages/inc/inc.header.php"); ?>
+<script type="text/javascript" src="/src/js/lib/jquery/countdown/jquery.countdown.flip.js"></script>  
+<style type="text/css">@import url("/src/js/lib/jquery/countdown/demo/jquery.countdown.flip.css");</style> 
+
+<article id="contents">
+    <a href="https://github.com/Reflejo/jquery-countdown"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <div class="wrapper">
+      <div class="cell">
+        <div id="holder">
+          <div class="digits"></div>
+        </div>
+      </div>
+    </div>
+    <div id="counter"></div>
+</article><!-- article End -->
+<script type="text/javascript">
+	(function($){
+		$(document).ready(function(){
+			 $(".digits").countdown({
+		       image: "/src/js/lib/jquery/countdown/demo/digits.png",
+		      format: "mm:ss",
+		      startTime: "25:14"
+		    });
+		    //----
+		});
+	})($);
+</script>
+<?php include($_SERVER['DOCUMENT_ROOT']."/pages/inc/inc.footer.php"); ?>

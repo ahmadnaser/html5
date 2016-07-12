@@ -1,0 +1,22 @@
+<?php include($_SERVER['DOCUMENT_ROOT']."/pages/inc/inc.header.php"); ?>
+<script type="text/javascript" src="/js/lib/jquery/scale9grid/jquery.scale9grid.js"></script>
+<style type="text/css">
+	.aqua {
+		position: relative;
+		background:url('/js/lib/jquery/scale9grid/demo/images/aqua.png');
+		width: 100%;
+		height: 100px;		
+	}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+		$('.aqua').scale9Grid({top:10,bottom:10,left:10,right:10});
+	});
+</script>
+<article id="contents">
+<div class="aqua">
+	AQUA
+</div>	
+
+</article><!-- article End -->

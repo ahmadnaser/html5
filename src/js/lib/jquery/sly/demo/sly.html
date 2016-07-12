@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<?php include($_SERVER['DOCUMENT_ROOT']."/pages/inc/inc.import.php"); ?><!-- Header Meta Data -->
+		<!-- masonry Style -->
+		<style type="text/css" rel="stylesheet">
+		/*==================================================
+		    Sly Scroll Style
+		==================================================*/
+		#cntWrap  { padding: 0px; margin: 0 auto;  height: 'auto';  }		 
+		#cntWrap li { width:200px; height: 300px; margin:0px;  float: left; }
+		#cntWrap li img {width:100%;  max-width: 200px; vertical-align: top; padding:0px; margin: 0px; text-align: center;}
+		</style>
+		<script type="text/javascript" src="/js/jquery/sly/jquery.sly.js"></script>
+		<!-- masonry Script -->
+		<script type="text/javascript">
+		 (function($){
+		 	 
+		 	$(document).ready(function(){
+		 		 $('#cntWrap').sly({
+					horizontal: 1,
+					itemNav: "smart",
+					dragHandle: 1,
+					dynamicHandle: 1,
+					dragging: 1,
+					startAt: 3,
+					scrollBy: 1,
+					speed: 300
+				//	easing: 'easeInOutExpo'
+				});
+		 		
+		 		$('#cntWrap').on('click','li',function(){
+		 			var idx=$(this).index();
+		 			//alert(idx);
+		 			//console.log(idx);
+		 		});
+		 	})
+		 	 
+		 })($);
+		</script>
+	</head>
+	<body>
+		<span><a href="https://github.com/Darsain/sly/wiki/Markup">https://github.com/Darsain/sly/wiki/Markup</a></span><p></p>
+		<span><a href="https://github.com/Darsain/sly/wiki/Calling">https://github.com/Darsain/sly/wiki/Calling</a></span><p></p>
+		<div id="cntWrap">
+			 <ul class="list">
+			 	<li><a href="#"><img src="/common/images/gallery/img1.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img2.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img3.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img4.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img5.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img6.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img7.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img8.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img9.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img10.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img11.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img12.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img13.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img14.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img15.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img16.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img17.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img18.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img19.jpg" /></a></li>
+			 	<li><a href="#"><img src="/common/images/gallery/img20.jpg" /></a></li>
+			 </ul>
+		</div>
+	</body>
+</html>

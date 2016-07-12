@@ -1,0 +1,25 @@
+<?php include($_SERVER['DOCUMENT_ROOT']."/pages/inc/inc.header.php"); ?>
+<script type="text/javascript" src="/js/lib/jquery/tween/easing/EasePack.js"></script>  <!-- 개별 script 추가-->
+<script type="text/javascript" src="/js/lib/jquery/tween/TweenMax.js"></script>  <!-- 개별 script 추가-->
+
+
+<style type="text/css">
+	#cnt { width:500px; height:50px; background:#0088FF;  position: relative; }
+</style>
+<script type="text/javascript">
+
+		$(document).ready(function(){
+	 
+		//	TweenLite.to(cnt, 1, { backgroundColor:"#ff0000", width:"500px"});
+			TweenLite.to($('#cnt'), 1.5, { autoAlpha:0, rotation:30,height:300, width:100, delay:0, backgroundColor:"#ff0000", ease:"Elastic.easeInOut", onComplete:myFunction});
+			function myFunction() {
+			    console.log("tween finished");
+			}
+		});
+
+</script>
+<article id="contents">
+	<section id='cnt'>square</section><!-- name1-->
+	 
+</article><!-- article End -->
+<?php include($_SERVER['DOCUMENT_ROOT']."/pages/inc/inc.footer.php"); ?>

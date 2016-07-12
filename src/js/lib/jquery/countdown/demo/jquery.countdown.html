@@ -1,0 +1,101 @@
+<?php include($_SERVER['DOCUMENT_ROOT']."/pages/inc/inc.header.php"); ?> <script type="text/javascript" src="/src/js/lib/jquery/countdown/jquery.countdown.js"></script>
+<style type="text/css">
+	div { font-size:20px; text-indent:20px; font-weight:bolder; }
+</style>
+
+<article id="contents">
+	<a href="http://harshen.github.io/jquery-countdownTimer/" target="_blank">http://harshen.github.io/jquery-countdownTimer/</a>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id="timer1">
+		&nbsp;
+	</div>
+	<br>
+	<script type="text/javascript">
+		(function($) {
+			$(document).ready(function() {
+				//return false;
+				$('#timer1').countdowntimer({
+					dateAndTime : "2016/01/01 00:00:00",
+					size : "lg"
+				});
+			});
+		})($);
+	</script>
+	<div id="timer2" data-hours="111" data-minutes="0" data-seconds="10">
+		&nbsp;
+	</div>
+	<br>
+	<script type="text/javascript">
+		(function($) {
+			$(document).ready(function() {
+				//return false;
+				var _t = $('#timer2'); // 멀티로 사용할경우 ID로 접근
+				var _hours = Number(_t.attr('data-hours').trim()), _minutes = Number(_t.attr('data-minutes').trim()), _seconds = Number(_t.attr('data-seconds').trim());
+				if(_hours>=72){
+					alert('3일이상');
+				}else{				
+				}
+				_t.countdowntimer({
+						hours : _hours,
+						minutes : _minutes,
+						seconds : _seconds,
+						timeTick : timeisTick,
+						timeUp : timeisUp
+					});
+				function timeisTick(data) {
+					//console.log(data);
+				}
+
+				function timeisUp() {
+					//	alert('완료');
+				}
+			});
+		})($);
+	</script>
+	<div id="timer3">
+		&nbsp;
+	</div>
+	<br>
+	<script type="text/javascript">
+		(function($) {
+			$(document).ready(function() {
+				//return false;
+				$('#timer3').countdowntimer({
+					currentTime : true
+				});
+			});
+		})($);
+	</script>
+	<div id="timer4">
+		&nbsp;
+	</div>
+	<br>
+	<script type="text/javascript">
+		(function($) {
+			$(document).ready(function() {
+				$('#timer4').countdowntimer({
+					hours : 0,
+					minutes : 0,
+					seconds : 10,
+					timeTick : timeisTick,
+					timeUp : timeisUp
+				});
+				function timeisTick(data) {
+				//	console.log(data);
+				}
+
+				function timeisUp() {
+					//console.log("### TIME END");
+				}
+
+			});
+		})($);
+	</script>
+	<div style="height: 300px;"></div>
+	<br>
+</article><!-- article End -->
+<?php include($_SERVER['DOCUMENT_ROOT']."/pages/inc/inc.footer.php"); ?>
+

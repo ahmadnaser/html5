@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<?php include($_SERVER['DOCUMENT_ROOT']."/pages/inc/inc.import.php"); ?><!-- Header Meta Data -->
+		<!-- masonry Style -->
+		<style type="text/css" rel="stylesheet">
+		/*==================================================
+		    masonry Style
+		==================================================*/
+		#masonryWrap  { padding: 0px; margin: 0 auto;  height: 'auto';  }		/*  Wrap 의 Padding 으로 안쪽 여백제어 transition height일경우 꼭 height auto로 script && CSS처리할것	*/
+		#masonryWrap li.item { width:200px; height: auto; margin:0px;    }
+		#masonryWrap li.item img {width:100%;  max-width: 200px; vertical-align: top; padding:0px; margin: 0px; text-align: center;}
+		</style>
+		<script type="text/javascript" src="/js/jquery/event/jquery.event.imagesloaded.js"></script>
+		<script type="text/javascript" src="/js/jquery/isotope/jquery.isotope.min.js"></script>
+		<script type="text/javascript" src="/js/jquery/isotope/jquery.isotope.center.js"></script>
+		<!-- masonry Script -->
+		<script type="text/javascript">
+		 (function($){
+			var masonry = {
+				statics : {
+					SPEED : 700,
+					EASING : 'easeInOutExpo'
+				},
+				init : function() {
+					this._$target = $('#masonryWrap');
+					this.create();
+				},
+				create : function() {
+					var self = this;
+					this._$target.isotope({
+						itemSelector : '.item',
+						animationEngine : 'jquery',
+						masonry : {
+							columnWidth : 200
+						},
+						animationOptions : {
+							duration : self.statics.SPEED,
+							easing : self.statics.EASING,
+							queue : false
+						}
+					});
+					this._$target.isotope( 'layout', $items, callback )
+				}
+			}
+		 	$(document).ready(function(){		 		
+		 		 masonry.init();
+		 	});
+		 })($);
+		</script>
+	</head>
+	<body>
+		<div id="cntWrap">
+			 <ul id="masonryWrap">
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img1.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img2.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img3.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img4.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img5.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img6.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img7.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img8.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img9.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img10.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img11.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img12.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img13.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img14.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img15.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img16.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img17.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img18.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img19.jpg" /></a></li>
+			 	<li class="item"><a href="#"><img src="/common/images/gallery/img20.jpg" /></a></li>
+			 </ul>
+		</div>
+	</body>
+</html>
