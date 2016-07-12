@@ -1,0 +1,65 @@
+@charset "utf-8";
+/*==================================================
+    common default style CSS Reset
+==================================================*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0; padding:0;}
+/*html, body { height:100%; }*/
+fieldset,img {border:0 none;}
+dl,ul,ol,menu,li {list-style:none;}
+ul:after { content:''; clear:both; }
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,q:before, q:after {content:''; content:none;}
+input,select,textarea,button {font-size:100%; vertical-align:middle;}
+input,textarea {-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+button {border:0 none; background-color:transparent; cursor:pointer;}
+table {border-collapse:collapse; border-spacing:0;}
+body {-webkit-text-size-adjust:none;} /* 뷰표트 변환시 폰트크기 자동확대 방지 */
+input[type='text'],input[type='password'],input[type='submit'],input[type='search'] {-webkit-appearance:none; border-radius:0;}
+input:checked[type='checkbox'] {background-color:#666; -webkit-appearance:checkbox;}
+button,input[type='button'],input[type='submit'],input[type='reset'],input[type='file'] {-webkit-appearance:button; border-radius:0;}
+input[type='search']::-webkit-search-cancel-button {-webkit-appearance:none;}
+/*------------------ 기본 색상 및 anchor 설정 ------------------*/
+body,th,td,input,select,textarea,button {font-size:12px; line-height:1.5;    font-family: "맑은 고딕", "Malgun Gothic","나눔고딕", "NanumGothic",  "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", Ngothic, sans-serif; color:#1a1a1a;}
+address,caption,cite,code,dfn,em,var {font-style:normal; font-weight:normal;}
+caption {overflow:hidden; position: absolute; width:0; height:0; line-height:0; text-indent:-9999px;}
+input, button {outline:0;}
+html {  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);text-stroke: 0.6px; /*마치 맥의 폰트처럼 두께 라인을 살려준다. */
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-smoothing: antialiased; white-space:nowrap;  font-smoothing: antialiased;}
+
+/*body { background: url("/src/asset/background/bg.path.png") #FFF repeat-y;}*/
+body { position: absolute; box-sizing: border-box; width:100%;height:100%; min-height:100%; border-right:1px solid #e5e5e5; }
+/*==================================================
+    path style
+==================================================*/
+
+#path .wrapper { clear:both; padding:0; }
+#btnCtrl { float:right;  margin:10px;}
+#btnCtrl a ,#btnCtrl a:active , #btnCtrl a:visited , #btnCtrl a:hover { padding:1px; text-decoration: none; color:#111; font-size:14px; }
+
+h2.title { display:block;  font-size:14px; border-bottom:1px solid #111;  }
+h2.title a { color:#999; text-decoration: none; padding-left:30px;  }
+h2.title a:hover { color: #333;}
+h2.title div {  padding:5px 0; }
+h2.title i { margin:0 10px;}
+
+nav {   text-align: left; }
+nav li { overflow: hidden; }
+nav li a { display:block; font-size:14px; padding:10px 0; color:#000; background:#FFFFFF;  text-decoration: none;border-bottom: 1px solid #e5e5e5;}
+nav li a:hover { color:#111; background:#f7f7f7; }
+nav li a:hover span.icon { color:#FFF; background: #c0c0c0; text-decoration: none; border:0; }
+
+nav li a span.icon { position:relative; color:#000; font-size:14px; padding:13px 20px;  }
+nav li a span.icon:after { position: absolute;top:15px;right:0; width:1px; height:15px; background: #c0c0c0; content:'';  }
+nav li a span.icon i {   }
+nav li a span.txt { padding-left:10px; font-size:12px;  }
+nav li a span.expand { float:right; margin-top:5px; padding-right:15px; font-size:10px; }
+
+nav ul ul { display:none; }
+nav ul ul li { }
+nav ul ul li a { padding:10px 0 10px 60px; }
+nav ul ul li a i { margin:0 10px;color:#444444; }
+
+/* active */
+nav >ul >li.on > a {   }
+nav >ul >li.on .sub { display:block;}
+nav >ul >li.on .sub li.on a {  color:#FFF; background: #4f98e7; }
